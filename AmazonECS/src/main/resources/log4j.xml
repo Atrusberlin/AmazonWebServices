@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN"
+    "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration debug="false">
+  <appender name="Console" class="org.apache.log4j.ConsoleAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ABSOLUTE} %5p %c{1}:%L - %m%n"/>
+    </layout>
+  </appender>
+
+  <logger name="de.dranke.aws" additivity="false">
+    <level value="trace"/>
+    <appender-ref ref="Console"/>
+  </logger>
+    <logger name="de.dranke.medienverwaltung" additivity="false">
+    <level value="debug"/>
+    <appender-ref ref="Console"/>
+  </logger>
+  <root>
+    <level value="error"/>
+    <appender-ref ref="Console"/>
+  </root>
+
+</log4j:configuration>

@@ -1,4 +1,8 @@
 *.class
+.idea
+.git
+target/**/*
+AwsCredentials.properties
 
 # Package Files #
 *.jar
